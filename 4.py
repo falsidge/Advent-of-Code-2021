@@ -53,14 +53,18 @@ print(int(won)*tot)
 
 any(all(map(isinstance,i,[int]*2*len(board)))for i in[*zip(*board)]+board)
 any(all(map(isinstance,i,[int]*2*len(board)))for i in[*zip(*board)]+board)
-any(all(map(lambda x:x==0,i))for i in[*zip(*board)]+board)
+any(all(map(lambda x:x==0,i))for i in[*zip(*board)]+board) # check_board
 
-f=open("4").read().split("\n\n");[*map(lambda t:[*map(lambda b:[*map(lambda c:b:=[*map(lambda x:0 if x==c else x,b)],f[0].split(","))],map(str.split, t.split("\n")))],f)]
-f=open("4").read().split("\n\n");[*map(lambda t:[*map(lambda b:[*map(lambda c:c,map(int,f[0].split(",")))],map(str.split, t.split("\n")))],f)]
+#f=open("4").read().split("\n\n");[*map(lambda t:[*map(lambda b:[*map(lambda c:c,map(int,f[0].split(",")))],map(str.split, t.split("\n")))],f)]
+# f=open("4").read().split("\n\n");[*map(lambda t:[*map(lambda b:[*map(lambda c:(b:=[0 if x==c else x for x in b]),f[0].split(","))],map(str.split, t.split("\n")))],f)]
+f=open("4").read().split("\n\n");[*map(lambda t:
+[*map(lambda b:([0 if x==c else x for x in b]
+) for c in f[0].split(","))],map(str.split, t.split("\n")))],f)]
 
 #board map(str.split, t.split("\n")f
 #f=open("4").read().split("\n\n");[*map(lambda t:[*map(lambda c:print(t:=t.replace()),map(int,f[0].split(",")))],f)]
 
+map(b.split())
 int.__class__
 print(
 check([

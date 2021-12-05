@@ -42,8 +42,8 @@ f=0;print(sum(i[0]!="f"and int("-"*(i=="up")+v)or(f:=f+int(v))*0for i,v in map(s
 #print((sum(({'f':1j,'d':1,'u':-1}[A[0]]*int(A.split()[1])for A in open('a')))**2).imag/2)
 print((sum(({'f':1j,'d':1,'u':-1}[A[0]]*int(A.split()[1])for A in open('a')))**2).imag/2)
 print((sum({'f':1j,'d':1,'u':-1}[A[0]]*int(A.split()[1])for A in open('a'))**2).imag/2)
-print((sum(dict(f=1j,d=1,u=-1))[A[0]]*int(A.split()[1])for A in open('a'))**2).imag/2)
 print((sum((int((ord(A[0])-108)/8)or 1j)*int(A.split()[1])for A in open('a'))**2).imag/2)
+print((sum(dict(f=1j,d=1,u=-1)[A[0]]*int(A.split()[1])for A in open('a'))**2).imag/2)
 
 
 #f    u   d
