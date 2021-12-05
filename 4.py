@@ -13,6 +13,7 @@ def check(board):
         return True
 
     return False
+    any(all(map(0.__eq__,i))for i in board)
 
 mint = 0
 mini = 0
@@ -49,14 +50,26 @@ for i in range(len(t[0])):
     tot += sum(map(int, board[i]))
 print(time, mini, mint, won, tot, int(won)*tot)
 print(int(won)*tot)
-    
+
+any(all(map(isinstance,i,[int]*2*len(board)))for i in[*zip(*board)]+board)
+any(all(map(isinstance,i,[int]*2*len(board)))for i in[*zip(*board)]+board)
+any(all(map(lambda x:x==0,i))for i in[*zip(*board)]+board)
+
+f=open("4").read().split("\n\n");[*map(lambda t:[*map(lambda b:[*map(lambda c:b:=[*map(lambda x:0 if x==c else x,b)],f[0].split(","))],map(str.split, t.split("\n")))],f)]
+f=open("4").read().split("\n\n");[*map(lambda t:[*map(lambda b:[*map(lambda c:c,map(int,f[0].split(",")))],map(str.split, t.split("\n")))],f)]
+
+#board map(str.split, t.split("\n")f
+#f=open("4").read().split("\n\n");[*map(lambda t:[*map(lambda c:print(t:=t.replace()),map(int,f[0].split(",")))],f)]
+
+int.__class__
 print(
 check([
 [0,1,0],
-[1,0,"3"],
+[1,1,"3"],
 [0,"2","3"]
 ]
 )
 )
 
 
+any(all(map(lambda x:x==0,i))for i in[*zip(*board)]+board)
